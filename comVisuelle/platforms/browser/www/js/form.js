@@ -54,5 +54,7 @@ $("#selectCategory").on("select2:select", function (e)
 
 function onDeviceReady(){
     // window.requestFileSystem(LocalFileSystem.PERSISTENT, 1024*1024, successCB, errorHandler);
-    $("#inputFile").addEventListener("click", cameraGetPicture);
+    $("#inputFile").on("click", cameraGetPicture);
 }
+
+onDeviceReady();

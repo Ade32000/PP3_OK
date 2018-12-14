@@ -1,0 +1,10 @@
+[
+	{
+        "fk_picture": "1",
+        "fk_tag": "4"
+    },
+    {
+        "fk_picture": "2",
+        "fk_tag": "3"
+    }
+]

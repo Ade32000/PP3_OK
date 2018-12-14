@@ -1,0 +1,603 @@
+ 
+[
+    {
+        
+        "tag_id": 1,
+        "tag_name": "Cerceau"
+        
+    },
+    {
+        
+        "tag_id": 2,
+        "tag_name": "Base"
+        
+    },
+    {
+        
+        "tag_id": 3,
+        "tag_name": "Haie"
+        
+    },
+    {
+        
+        "tag_id": 4,
+        "tag_name": "Toucher"
+        
+    },
+    {
+        
+        "tag_id": 5,
+        "tag_name": "Doigt"
+        
+    },
+    {
+        
+        "tag_id": 6,
+        "tag_name": "Main"
+        
+    },
+    {
+        
+        "tag_id": 7,
+        "tag_name": "Épaule"
+        
+    },
+    {
+        
+        "tag_id": 8,
+        "tag_name": "Bras"
+        
+    },
+    {
+        
+        "tag_id": 9,
+        "tag_name": "Suivant"
+        
+    },
+    {
+        
+        "tag_id": 10,
+        "tag_name": "Repas"
+        
+    },
+    {
+        
+        "tag_id": 11,
+        "tag_name": "Dîner\n"
+        
+    },
+    {
+        
+        "tag_id": 12,
+        "tag_name": "Souper"
+        
+    },
+    {
+        
+        "tag_id": 13,
+        "tag_name": "Déjeuner"
+        
+    },
+    {
+        
+        "tag_id": 14,
+        "tag_name": "Nourriture"
+        
+    },
+    {
+        
+        "tag_id": 15,
+        "tag_name": "Légume"
+        
+    },
+    {
+        
+        "tag_id": 16,
+        "tag_name": "Entrée"
+        
+    },
+    {
+        
+        "tag_id": 17,
+        "tag_name": "Froid"
+        
+    },
+    {
+        
+        "tag_id": 18,
+        "tag_name": "Chaud"
+        
+    },
+    {
+        
+        "tag_id": 19,
+        "tag_name": "Vinaigrette"
+        
+    },
+    {
+        
+        "tag_id": 20,
+        "tag_name": "Découper"
+        
+    },
+    {
+        
+        "tag_id": 21,
+        "tag_name": "Colorier"
+        
+    },
+    {
+        
+        "tag_id": 22,
+        "tag_name": "Peindre"
+        
+    },
+    {
+        
+        "tag_id": 23,
+        "tag_name": "Coller"
+        
+    },
+    {
+        
+        "tag_id": 24,
+        "tag_name": "Positionner"
+        
+    },
+    {
+        
+        "tag_id": 25,
+        "tag_name": "Préparer"
+        
+    },
+    {
+        
+        "tag_id": 26,
+        "tag_name": "Cuire"
+        
+    },
+    {
+        
+        "tag_id": 27,
+        "tag_name": "Laver"
+        
+    },
+    {
+        
+        "tag_id": 28,
+        "tag_name": "Ranger"
+        
+    },
+    {
+        
+        "tag_id": 29,
+        "tag_name": "Nettoyer"
+        
+    },
+    {
+        
+        "tag_id": 30,
+        "tag_name": "Viande"
+        
+    },
+    {
+        
+        "tag_id": 31,
+        "tag_name": "Sucre"
+        
+    },
+    {
+        
+        "tag_id": 32,
+        "tag_name": "Sel"
+        
+    },
+    {
+        
+        "tag_id": 33,
+        "tag_name": "Chanter"
+        
+    },
+    {
+        
+        "tag_id": 34,
+        "tag_name": "Crier"
+        
+    },
+    {
+        
+        "tag_id": 35,
+        "tag_name": "Chanson"
+        
+    },
+    {
+        
+        "tag_id": 36,
+        "tag_name": "Percussion"
+        
+    },
+    {
+        
+        "tag_id": 37,
+        "tag_name": "Guitare"
+        
+    },
+    {
+        
+        "tag_id": 38,
+        "tag_name": "Piano"
+        
+    },
+    {
+        
+        "tag_id": 39,
+        "tag_name": "Panier"
+        
+    },
+    {
+        
+        "tag_id": 40,
+        "tag_name": "Images"
+        
+    },
+    {
+        
+        "tag_id": 41,
+        "tag_name": "Cartes"
+        
+    },
+    {
+        
+        "tag_id": 42,
+        "tag_name": "Courir"
+        
+    },
+    {
+        
+        "tag_id": 43,
+        "tag_name": "Sauter"
+        
+    },
+    {
+        
+        "tag_id": 44,
+        "tag_name": "Nager"
+        
+    },
+    {
+        
+        "tag_id": 45,
+        "tag_name": "Marcher"
+        
+    },
+    {
+        
+        "tag_id": 46,
+        "tag_name": "Fruit"
+        
+    },
+    {
+        
+        "tag_id": 47,
+        "tag_name": "Vert"
+        
+    },
+    {
+        
+        "tag_id": 48,
+        "tag_name": "Jaune"
+        
+    },
+    {
+        
+        "tag_id": 49,
+        "tag_name": "Régime"
+        
+    },
+    {
+        
+        "tag_id": 50,
+        "tag_name": "Eau"
+        
+    },
+    {
+        
+        "tag_id": 51,
+        "tag_name": "Verre"
+        
+    },
+    {
+        
+        "tag_id": 52,
+        "tag_name": "Bouteille"
+        
+    },
+    {
+        
+        "tag_id": 53,
+        "tag_name": "Hydrater"
+        
+    },
+    {
+        
+        "tag_id": 54,
+        "tag_name": "Bien"
+        
+    },
+    {
+        
+        "tag_id": 55,
+        "tag_name": "Saint"
+        
+    },
+    {
+        
+        "tag_id": 56,
+        "tag_name": "Gentil"
+        
+    },
+    {
+        
+        "tag_id": 57,
+        "tag_name": "Habit"
+        
+    },
+    {
+        
+        "tag_id": 58,
+        "tag_name": "Hiver"
+        
+    },
+    {
+        
+        "tag_id": 59,
+        "tag_name": "Protection"
+        
+    },
+    {
+        
+        "tag_id": 60,
+        "tag_name": "Tête"
+        
+    },
+    {
+        
+        "tag_id": 61,
+        "tag_name": "Sauce"
+        
+    },
+    {
+        
+        "tag_id": 62,
+        "tag_name": "Matin"
+        
+    },
+    {
+        
+        "tag_id": 63,
+        "tag_name": "Goûter"
+        
+    },
+    {
+        
+        "tag_id": 64,
+        "tag_name": "Tasse"
+        
+    },
+    {
+        
+        "tag_id": 65,
+        "tag_name": "Soucoupe"
+        
+    },
+    {
+        
+        "tag_id": 66,
+        "tag_name": "Lait"
+        
+    },
+    {
+        
+        "tag_id": 67,
+        "tag_name": "Dessert"
+        
+    },
+    {
+        
+        "tag_id": 68,
+        "tag_name": "Chocolat"
+        
+    },
+    {
+        
+        "tag_id": 69,
+        "tag_name": "Crème"
+        
+    },
+    {
+        
+        "tag_id": 70,
+        "tag_name": "Chantilly"
+        
+    },
+    {
+        
+        "tag_id": 71,
+        "tag_name": "Cheval"
+        
+    },
+    {
+        
+        "tag_id": 72,
+        "tag_name": "Carriole"
+        
+    },
+    {
+        
+        "tag_id": 73,
+        "tag_name": "Cocher"
+        
+    },
+    {
+        
+        "tag_id": 74,
+        "tag_name": "Orange"
+        
+    },
+    {
+        
+        "tag_id": 75,
+        "tag_name": "Look"
+        
+    },
+    {
+        
+        "tag_id": 76,
+        "tag_name": "Mauvais"
+        
+    },
+    {
+        
+        "tag_id": 77,
+        "tag_name": "Mal"
+        
+    },
+    {
+        
+        "tag_id": 78,
+        "tag_name": "Dangereux"
+        
+    },
+    {
+        
+        "tag_id": 79,
+        "tag_name": "Plat"
+        
+    },
+    {
+        
+        "tag_id": 80,
+        "tag_name": "Dormir"
+        
+    },
+    {
+        
+        "tag_id": 81,
+        "tag_name": "Lit"
+        
+    },
+    {
+        
+        "tag_id": 82,
+        "tag_name": "Armoire"
+        
+    },
+    {
+        
+        "tag_id": 83,
+        "tag_name": "Protéger"
+        
+    },
+    {
+        
+        "tag_id": 84,
+        "tag_name": "Pieds"
+        
+    },
+    {
+        
+        "tag_id": 85,
+        "tag_name": "Préférer"
+        
+    },
+    {
+        
+        "tag_id": 86,
+        "tag_name": "Aimer"
+        
+    },
+    {
+        
+        "tag_id": 87,
+        "tag_name": "Film"
+        
+    },
+    {
+        
+        "tag_id": 88,
+        "tag_name": "Salle"
+        
+    },
+    {
+        
+        "tag_id": 89,
+        "tag_name": "Ambiance"
+        
+    },
+    {
+        
+        "tag_id": 90,
+        "tag_name": "Émotion"
+        
+    },
+    {
+        
+        "tag_id": 91,
+        "tag_name": "Sport"
+        
+    },
+    {
+        
+        "tag_id": 92,
+        "tag_name": "Santé"
+        
+    },
+    {
+        
+        "tag_id": 93,
+        "tag_name": "Coeur"
+        
+    },
+    {
+        
+        "tag_id": 94,
+        "tag_name": "Alimentation"
+        
+    },
+    {
+        
+        "tag_id": 95,
+        "tag_name": "Magasin"
+        
+    },
+    {
+        
+        "tag_id": 96,
+        "tag_name": "Caissière"
+        
+    },
+    {
+        
+        "tag_id": 97,
+        "tag_name": "Café"
+        
+    },
+    {
+        
+        "tag_id": 98,
+        "tag_name": "Cuire"
+        
+    },
+    {
+        
+        "tag_id": 99,
+        "tag_name": "Griller"
+        
+    },
+    {
+        
+        "tag_id": 100,
+        "tag_name": "Dents"
+        
+    }
+]

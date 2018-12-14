@@ -50,9 +50,30 @@ $("#selectCategory").on("select2:select", function (e)
     console.log(select_value_category)
 });
 
-
+$('#selectCategory').one('click', function(){
+    db.transaction(searchAllCategories, errorCB, successCB);
+    console.log(categories);
+    for(var z=0; z<categories.length; z++){
+        $('#selectCategory').append('<option id="'+categories[z].category_id+'" value="'+categories[z].category_id+'">'+categories[z].category_name+'</option>');
+    }
+    return categories;
+});
 
 function onDeviceReady(){
     // window.requestFileSystem(LocalFileSystem.PERSISTENT, 1024*1024, successCB, errorHandler);
-    $("#inputFile").addEventListener("click", cameraGetPicture);
+    $("#inputFile").on("click", cameraGetPicture);
 }
+
+function displayCategories()
+{
+    db.transaction(searchAllCategories, errorCB, successCB);
+    console.log(categories);
+    for(var i = 0; i < category.length; i++)
+    {
+        $("#selectCategory").append("<option>" + category[i] + "</option>");
+    }
+}
+
+displayCategories();
+
+onDeviceReady();

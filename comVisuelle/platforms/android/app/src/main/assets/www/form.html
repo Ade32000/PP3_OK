@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+        <link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="node_modules/select2/dist/css/select2.min.css"/>
+        <link rel="stylesheet" type="text/css" href="css/form.css">
+        <title>Com Visuelle | formulaire de saisie</title>
+    </head>
+    <body>
+        <div id="mainForm">
+            <form method="POST" action="">
+                <div>
+                    <legend id="legende">FORMULAIRE D'INSERTION</legend>
+                </div>
+                <div class="form-group">
+                    <label for="image">1°) SÉLECTIONNER UNE IMAGE</label>
+                    <input id="inputFile" type="file" accept=".jpg, .jpeg, .png, .svg, .JPG, .JPEG, .PNG, .SVG" class="form-control-file" aria-describedby="fileHelp">
+                </div>
+                <div id="displayImg">
+                    <img id="myImage"></img>
+                    <div id="displayImagePath"></div>
+                </div>
+                <hr>
+                <div class="form-group">
+                    <label for="tag">2°) SÉLECTIONNER ET/OU CRÉER UN/PLUSIEURS TAGS</label>
+                    <!-- formulaire select2 -->
+                    <div>
+                        <select id="selectTag" class="form-control" multiple="multiple">
+                            <option value="orange">Orange</option>
+                            <option value="white">White</option>
+                            <option value="brown">Brown</option>
+                            <option value="purple">Purple</option>
+                            <option value="grey">Grey</option>
+                            <option value="black">Black</option>
+                            <option value="yellow">Yellow</option>
+                        </select>
+                    </div>
+
+                </div>
+                <hr>
+                <div class="form-group">
+                    <label for="categorie">3°) SÉLECTIONNER ET/OU CRÉER UNE CATÉGORIE</label>
+                        <select id="selectCategory" class="form-control">
+                        </select>
+                </div>
+                <div>
+                    <button id="confirmButton" type="submit" class="btn btn-success">Enregistrer</button>
+                </div>
+
+            </form>
+        </div>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
+        <script type="text/javascript" src="node_modules/select2/dist/js/select2.min.js"></script>
+        <script type="text/javascript" src="js/database.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript" src="js/form.js"></script>
+    </body>
+</html>

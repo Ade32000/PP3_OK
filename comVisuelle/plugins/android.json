@@ -15,6 +15,9 @@
     },
     "cordova-sqlite-plugin": {
       "PACKAGE_NAME": "io.cordova.hellocordova"
+    },
+    "cordova-plugin-file": {
+      "PACKAGE_NAME": "io.cordova.helloLaTeam"
     }
   },
   "dependent_plugins": {}
