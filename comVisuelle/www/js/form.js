@@ -66,12 +66,14 @@ function onDeviceReady(){
 
 function displayCategories()
 {
-    db.transaction(searchAllCategories, errorCB, successCB);
-    console.log(categories);
-    for(var i = 0; i < category.length; i++)
+    db.transaction(searchAllCategories, errorCB, function()
     {
-        $("#selectCategory").append("<option>" + category[i] + "</option>");
-    }
+        console.log(categories);
+        for(var i = 0; i < categories.length; i++)
+        {
+            $("#selectCategory").append("<option value='" + categories[i].category_id + "'>" + categories[i].category_name + "</option>");
+        }
+    });
 }
 
 displayCategories();
