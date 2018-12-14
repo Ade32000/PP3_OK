@@ -1,0 +1,82 @@
+[
+    {
+        "category_id": "1",
+        "category_name": "Aliments"
+    },
+    {
+        "category_id": "2",
+        "category_name": "Actions"
+    },
+    {
+        "category_id": "3",
+        "category_name": "Activités"
+    },
+    {
+        "category_id": "4",
+        "category_name": "Hygiène"
+    },
+    {
+        "category_id": "5",
+        "category_name": "Santé"
+    },
+    {
+        "category_id": "6",
+        "category_name": "Sorties"
+    },
+    {
+        "category_id": "7",
+        "category_name": "Loisirs"
+    },
+    {
+        "category_id": "8",
+        "category_name": "Humeurs"
+    },
+    {
+        "category_id": "9",
+        "category_name": "Temps"
+    },
+    {
+        "category_id": "10",
+        "category_name": "Interdit"
+    },
+    {
+        "category_id": "11",
+        "category_name": "Interactions"
+    },
+    {
+        "category_id": "12",
+        "category_name": "Sports"
+    },
+    {
+        "category_id": "13",
+        "category_name": "Lieux"
+    },
+    {
+        "category_id": "14",
+        "category_name": "Évènements"
+    },
+    {
+        "category_id": "15",
+        "category_name": "Objets"
+    },
+    {
+        "category_id": "16",
+        "category_name": "Habits"
+    },
+    {
+        "category_id": "17",
+        "category_name": "Gestes"
+    },
+    {
+        "category_id": "18",
+        "category_name": "Interactions avec pros"
+    },
+    {
+        "category_id": "19",
+        "category_name": "Émotions"
+    },
+    {
+        "category_id": "20",
+        "category_name": "États"
+    }
+]

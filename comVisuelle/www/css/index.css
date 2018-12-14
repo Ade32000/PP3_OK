@@ -1,0 +1,61 @@
+
+/* @media (min-width: 768px) and (max-width: 1199.98px)
+{ ...
+} */
+/* body{
+    background-image: url('../img/background.jpg');
+    background-size: auto;
+    background-repeat: no-repeat;
+
+} */
+
+#fond{
+
+    background-image: url('../img/background.jpg');
+    background-size: auto;
+    background-repeat: no-repeat;
+
+}
+
+ #navbar{
+           margin: 0 !important;
+           width: 100%;
+           justify-content: space-between;
+
+        }
+/* espacement entre les boutons */
+
+li {
+	margin : 10px 0;
+}
+
+#dropdownMenu2{
+    background-color: #004466;
+    border-radius: 4px;
+    color: rgb(255, 255, 255);
+    text-decoration-color: rgb(255, 255, 255);
+    width: 120px;
+    text-align: center;
+}
+
+#admin{
+    height: 38px;
+    width: 120px;
+    background-color: #b0d50c;
+    text-decoration-color: rgb(255, 255, 255);
+    border: #b0d50c;
+    /* margin: 2px; */
+}
+#admin:hover{
+    background-color: rgb(117, 166, 49);
+}
+
+#search{
+    position: absolute;
+	top: 0px;
+	right: 0px;
+    float: left;
+
+
+
+}
