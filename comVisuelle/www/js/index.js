@@ -148,8 +148,9 @@ $('#selectCat').change(function(){
     console.log(byCategory);
     for(var b=0; b<byCategory.length; b++){
             $('#display').html("");
-            $('#display').append('<img class="zoom" accept=".jpg, .jpeg, .png, .svg, .JPG, .JPEG, .PNG, .SVG"  src="'+byCategory[b].picture_url+'"alt="'+byCategory[b].picture_name+'"/>');
-    }
+            // $('#display').append('<img class="zoom" accept=".jpg, .jpeg, .png, .svg, .JPG, .JPEG, .PNG, .SVG"  src="'+byCategory[b].picture_url+'"alt="'+byCategory[b].picture_name+'"/>');
+            $('#display').append('<a href="'+byCategory[b].picture_url+'" data-lightbox="'+byCategory[b].picture_name+'" data-title="My caption" class="images"><img src="'+byCategory[b].picture_url+'" alt="'+byCategory[b].picture_name+'" /></a>');
+        }
 
 });
 
@@ -161,7 +162,9 @@ $('#inputSearch').one('click', function(){
     db.transaction(searchAllPictures, errorCB, successCB);
     console.log(pictures);
     for(var y=0; y<pictures.length; y++){
-        $('#display').append('<img class="zoom" accept=".jpg, .jpeg, .png, .svg, .JPG, .JPEG, .PNG, .SVG"  src="'+pictures[y].picture_url+'"alt="'+pictures[y].picture_name+'"/>');
+        // $('#display').append('<img class="zoom" accept=".jpg, .jpeg, .png, .svg, .JPG, .JPEG, .PNG, .SVG"  src="'+pictures[y].picture_url+'"alt="'+pictures[y].picture_name+'"/>');
+        $('#display').append('<a href="'+pictures[y].picture_url+'" data-lightbox="'+pictures[y].picture_name+'" data-title="My caption" class="images"><img src="'+pictures[y].picture_url+'" alt="'+pictures[y].picture_name+'" /></a>');
+        
     }
 });
 
@@ -171,7 +174,9 @@ $('#inputSearch').keydown(function(){
     console.log(keyword);
     $('#display').html("");
     for(var k=0; k<keyword.length; k++){
-        $('#display').append('<img accept=".jpg, .jpeg, .png, .svg, .JPG, .JPEG, .PNG, .SVG"  src="'+keyword[k].picture_url+'"alt="'+keyword[k].picture_name+'"/>');
+        // $('#display').append('<img accept=".jpg, .jpeg, .png, .svg, .JPG, .JPEG, .PNG, .SVG"  src="'+keyword[k].picture_url+'"alt="'+keyword[k].picture_name+'"/>');
+        $('#display').append('<a href="'+keyword[k].picture_url+'" data-lightbox="'+keyword[k].picture_name+'" data-title="My caption" class="images"><img src="'+keyword[k].picture_url+'" alt="'+keyword[k].picture_name+'" /></a>');
+        
     }
 });
 
