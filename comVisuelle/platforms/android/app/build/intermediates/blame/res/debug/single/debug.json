@@ -28,14 +28,6 @@
         "source": "/home/nicolas/Documents/simplon/public/comVisuelleJs/comVisuelle/platforms/android/app/src/main/res/drawable-port-xxhdpi/screen.png"
     },
     {
-        "merged": "/home/adeline/Documents/Simplon/ProjetsAdeline/PROJETPEDAGO3/comVisuelle/platforms/android/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi_icon.png.flat",
-        "source": "/home/adeline/Documents/Simplon/ProjetsAdeline/PROJETPEDAGO3/comVisuelle/platforms/android/app/src/main/res/mipmap-xxxhdpi/icon.png"
-    },
-    {
-        "merged": "/home/adeline/Documents/Simplon/ProjetsAdeline/PROJETPEDAGO3/comVisuelle/platforms/android/app/build/intermediates/res/merged/debug/mipmap-ldpi_icon.png.flat",
-        "source": "/home/adeline/Documents/Simplon/ProjetsAdeline/PROJETPEDAGO3/comVisuelle/platforms/android/app/src/main/res/mipmap-ldpi/icon.png"
-    },
-    {
         "merged": "/home/nicolas/Documents/simplon/public/comVisuelleJs/comVisuelle/platforms/android/app/build/intermediates/res/merged/debug/drawable-port-xxxhdpi_screen.png.flat",
         "source": "/home/nicolas/Documents/simplon/public/comVisuelleJs/comVisuelle/platforms/android/app/src/main/res/drawable-port-xxxhdpi/screen.png"
     },
@@ -70,10 +62,6 @@
     {
         "merged": "/home/adeline/Documents/Simplon/ProjetsAdeline/PROJETPEDAGO3/comVisuelle/platforms/android/app/build/intermediates/res/merged/debug/drawable-port-ldpi_screen.png.flat",
         "source": "/home/adeline/Documents/Simplon/ProjetsAdeline/PROJETPEDAGO3/comVisuelle/platforms/android/app/src/main/res/drawable-port-ldpi/screen.png"
-    },
-    {
-        "merged": "/home/adeline/Documents/Simplon/ProjetsAdeline/PROJETPEDAGO3/comVisuelle/platforms/android/app/build/intermediates/res/merged/debug/mipmap-hdpi_icon.png.flat",
-        "source": "/home/adeline/Documents/Simplon/ProjetsAdeline/PROJETPEDAGO3/comVisuelle/platforms/android/app/src/main/res/mipmap-hdpi/icon.png"
     },
     {
         "merged": "/home/nicolas/Documents/simplon/public/PROJETPEDAGO3/comVisuelle/platforms/android/app/build/intermediates/res/merged/debug/drawable-port-ldpi_screen.png.flat",
@@ -184,10 +172,6 @@
         "source": "/home/nicolas/Documents/simplon/public/PROJETPEDAGO3/comVisuelle/platforms/android/app/src/main/res/mipmap-hdpi/icon.png"
     },
     {
-        "merged": "/home/adeline/Documents/Simplon/ProjetsAdeline/PROJETPEDAGO3/comVisuelle/platforms/android/app/build/intermediates/res/merged/debug/mipmap-xhdpi_icon.png.flat",
-        "source": "/home/adeline/Documents/Simplon/ProjetsAdeline/PROJETPEDAGO3/comVisuelle/platforms/android/app/src/main/res/mipmap-xhdpi/icon.png"
-    },
-    {
         "merged": "/home/nicolas/Documents/simplon/public/PROJETPEDAGO3/comVisuelle/platforms/android/app/build/intermediates/res/merged/debug/drawable-land-mdpi_screen.png.flat",
         "source": "/home/nicolas/Documents/simplon/public/PROJETPEDAGO3/comVisuelle/platforms/android/app/src/main/res/drawable-land-mdpi/screen.png"
     },
@@ -234,9 +218,5 @@
     {
         "merged": "/home/adeline/Documents/Simplon/ProjetsAdeline/PROJETPEDAGO3/comVisuelle/platforms/android/app/build/intermediates/res/merged/debug/drawable-land-mdpi_screen.png.flat",
         "source": "/home/adeline/Documents/Simplon/ProjetsAdeline/PROJETPEDAGO3/comVisuelle/platforms/android/app/src/main/res/drawable-land-mdpi/screen.png"
-    },
-    {
-        "merged": "/home/adeline/Documents/Simplon/ProjetsAdeline/PROJETPEDAGO3/comVisuelle/platforms/android/app/build/intermediates/res/merged/debug/mipmap-xxhdpi_icon.png.flat",
-        "source": "/home/adeline/Documents/Simplon/ProjetsAdeline/PROJETPEDAGO3/comVisuelle/platforms/android/app/src/main/res/mipmap-xxhdpi/icon.png"
     }
 ]

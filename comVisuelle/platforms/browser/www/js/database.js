@@ -5,6 +5,7 @@ var allCategories;
 var alltags;
 var allToHave;
 var allToBelong;
+var category;
 
 //cette fonction importe les données des fichiers json grâce à des requêtes ajax et éxécute les fonctions
 //qui remplissent les tables
