@@ -17,8 +17,8 @@ function fillDB(tx)
         dataType: "json"
     }).done(function(data)
     {
+        console.log(data);
         allPictures = data;
-        console.log(allPictures);
         db.transaction(fillPictures, errorCB, successCB);
     });
 
@@ -29,7 +29,6 @@ function fillDB(tx)
     }).done(function(data1)
     {
         allCategories = data1;
-        console.log(allCategories);
         db.transaction(fillCategories, errorCB, successCB);
     });
 
@@ -40,7 +39,6 @@ function fillDB(tx)
     }).done(function(data3)
     {
         allToBelong = data3;
-        console.log(allToBelong);
         db.transaction(fillToBelong, errorCB, successCB);
     });
 
@@ -51,7 +49,6 @@ function fillDB(tx)
     }).done(function(data4)
     {
         alltags = data4;
-        console.log(alltags);
         db.transaction(fillTags, errorCB, successCB);
     });
 
@@ -62,7 +59,6 @@ function fillDB(tx)
     }).done(function(data5)
     {
         allToHave = data5;
-        console.log(allToHave);
         db.transaction(fillToHave, errorCB, successCB);
     });       
 }
@@ -87,7 +83,6 @@ function fillPictures(tx)
         + allPictures[i].picture_id + ', "' + allPictures[i].picture_name + '", "' + allPictures[i].picture_url + '")';
         tx.executeSql(sql);
     }
-    console.log("pictures filled !");
 }
 
 //remplie la table categories avec les données du json
@@ -100,7 +95,6 @@ function fillCategories(tx)
         + allCategories[i].category_id + ', "' + allCategories[i].category_name + '")';
         tx.executeSql(sql);
     }
-    console.log("categories filled !");
 }
 
 //remplie la table to_belong avec les données du json
@@ -113,7 +107,6 @@ function fillToBelong(tx)
         + allToBelong[i].fk_category + ', "' + allToBelong[i].fk_picture + '")';
         tx.executeSql(sql);
     }
-    console.log("toBelong filled !");
 }
 
 //remplie la table to_have avec les données du json
@@ -126,7 +119,6 @@ function fillTags(tx)
         + alltags[i].tag_id + ', "' + alltags[i].tag_name + '")';
         tx.executeSql(sql);
     }
-    console.log("tags filled !");
 }
 
 //remplie la table to_have avec les données du json
@@ -139,5 +131,4 @@ function fillToHave(tx)
         + allToHave[i].fk_picture + ', ' + allToHave[i].fk_tag + ')';
         tx.executeSql(sql);
     }
-    console.log("to_have filled !");
 }
