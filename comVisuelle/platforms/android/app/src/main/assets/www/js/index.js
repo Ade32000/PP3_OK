@@ -6,13 +6,15 @@ var keyword;
 var str = "";
 var displayForm = false;
 var current;
+var byCat = [];
+var numberOfTurn = 0;
+var byCategory = [];
 
 //start se lance quand le téléphone est 'ready'
 function start()
 {
     db.transaction(fillDB, errorCB, successCB);
     db.transaction(searchAllPictures, errorCB, successCB);
-    db.transaction(searchByCategory, errorCB, successCB);
     db.transaction(testcategoris, errorCB, successCB);
 } 
 
@@ -20,6 +22,7 @@ function searchAllCategories(tx)
 {
     tx.executeSql('SELECT * FROM categories ORDER BY category_name ASC;', [], function(tx, result){
         categories = result.rows;
+        //console.log(categories);
         return categories;
     });
 }
@@ -36,76 +39,99 @@ function testcategoris(tx)
 {
     tx.executeSql("SELECT * FROM to_belong", [], function (tx, result)
     {
-        console.log(result.rows)
+        //console.log(result.rows)
     });
 }
+
 function searchByCategory(tx)
 {
-    var byCat = [];
-    var byCategory = [];
     var catId = parseInt(str);
-    console.log(catId);
-    tx.executeSql('SELECT fk_picture FROM to_belong WHERE fk_category = 1', [], function(tx, result)
+    numberOfTurn = 0;
+    resetInterface();
+    //console.log(catId);
+    tx.executeSql('SELECT fk_picture FROM to_belong WHERE fk_category =' + catId, [], function(tx, result)
     {
+        console.log("je select la categorie");
         var pic_in_cat = result.rows;
-        console.log(pic_in_cat);
-        console.log(pic_in_cat.length);
-        // for (var i=0; i<pic_in_cat.length; i++)
-        // {
-        //     console.log(pic_in_cat.length);
-        //     console.log(pic_in_cat[i]);
-        //     console.log(result.rows[i]);
-        //     tx.executeSql('SELECT * FROM pictures WHERE picture_id='+pic_in_cat[i].fk_picture+';',[],function(tx, picturesFromThisCat){
-        //         console.log(picturesFromThisCat.rows)
-        //         //byCat.push(pic_in_cat[i]);
-        //     });
-        // }
-        console.log(byCat);
+        var picturesFromCategories = [];
+        byCat = [];
+        for(var i = 0; i < pic_in_cat.length; i++)
+        {
+            console.log("je recupere les id des images correspondant a la categorie");
+            picturesFromCategories.push(pic_in_cat[i].fk_picture);
+        }
+        for (var i = 0; i < picturesFromCategories.length; i++)
+        {
+            console.log("je coucle dans picturesFromCategories");
+            console.log(picturesFromCategories);
+            tx.executeSql('SELECT * FROM pictures WHERE picture_id=' + picturesFromCategories[i] + ';', [],function(tx, picturesFromThisCat){
+                console.log("je select l'image depuis son id");
+                console.log(picturesFromThisCat.rows);
+                byCat.push(picturesFromThisCat.rows[0]);
+                console.log(byCat);
+                console.log(numberOfTurn);
+                if(numberOfTurn == picturesFromCategories.length-1)
+                {
+                    console.log("jai bouclé le dernier");
+                    for(var b = 0; b < byCat.length; b++)
+                    {
+                        console.log("je push dans byCat les images");
+                        console.log(byCat[b]);
+                        byCategory.push(byCat[b]);
+                        console.log(byCategory);
+                    }
+                    console.log(byCategory);
+                    displaySearchByCategory(byCategory);
+                    byCategory = [];
+                    byCat = [];
+                }
+                numberOfTurn++;
+            });
+        }
     });
-    
-    // console.log(byCat);
-    // var tmp =[];
-    // for(var b=0;b<byCat.length; b++)
-    // {
-    //     tmp.push(byCat[b]);
-    //     for(var f=0;f<tmp.length; f++)
-    //     {
-    //         byCategory.push(tmp[f]);
-    //     }
-    // }
-    // console.log(byCategory);
-    // displaySearchByCategory(byCategory);
+
+}
+
+function displayPicturesByCategory()
+{
+    console.log(byCat);
 }
 
 function searchByKeyword(tx)
 {
-    var inputVal = $('#inputSearch').val()+"%";
-    console.log(inputVal);
+    var inputVal = $('#inputSearch').val() + "%";
+    //console.log(inputVal);
     tx.executeSql('SELECT * FROM pictures WHERE picture_name LIKE "'+inputVal+'";',[],function(tx,result){
         keyword = result.rows;
         console.log(keyword);
         displaySearchByKeyword(keyword);
         return keyword;
     });
+    
 }
 
 function displaySearchByKeyword(keyword)
 {
-    $('#display').html("");
+    resetInterface();
     console.log(keyword);
     for(var k=0; k<keyword.length; k++){
        $('#display').append('<a href="'+keyword[k].picture_url+'" data-lightbox="'+keyword[k].picture_name+'" data-title="'+keyword[k].picture_name+'" class="images"><img src="'+keyword[k].picture_url+'" alt="'+keyword[k].picture_name+'" /></a>');
     }
 }
 
-function displaySearchByCategory()
+function displaySearchByCategory(byCategory)
 {
-    $('#display').html("");
-    for(var b=0; b<byCategory.length; b++){
+    resetInterface();
+    console.log(byCategory);
+    for(var b = 0; b < byCategory.length; b++){
         $('#display').append('<a href="'+byCategory[b].picture_url+'" data-lightbox="'+byCategory[b].picture_name+'" data-title="'+byCategory[b].picture_name+'" class="images"><img src="'+byCategory[b].picture_url+'" alt="'+byCategory[b].picture_name+'" /></a>');
     }
 }
 
+function resetInterface()
+{
+    $('#display').html("");
+}
 /**
  * Récupérer une image du gestionnaire de fichier de la tablette
  * 
@@ -146,14 +172,14 @@ $('#admin').on('click', function(){
     if(displayForm == false)
     {
         $('#selectCat').val("Catégories...");
-        $('#display').html("");
+        resetInterface();;
         $('#display').append('<iframe width="100%" height="600" sandbox="allow-scripts allow-forms allow-same-origin allow-popups allow-modals" seamless src="file:///android_asset/www/form.html">Le navigateur n\'est pas compatible></iframe>');
         displayForm = true;
     }
     
     else
     {
-        $("#display").empty();
+        resetInterface();;
         displayForm = false;
     }
 });
@@ -164,10 +190,10 @@ $('#admin').on('click', function(){
 
 $('#selectCat').one('click', function(){
     db.transaction(searchAllCategories, errorCB, successCB);
+    console.log(categories);
     for(var i=0; i<categories.length; i++){
         $('#selectCat').append('<option id="'+categories[i].category_id+'" value="'+categories[i].category_id+'">'+categories[i].category_name+'</option>');
     }
-    console.log(categories);
     return categories;
 });
 

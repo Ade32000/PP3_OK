@@ -39,7 +39,9 @@ function fillDB(tx)
     }).done(function(data3)
     {
         allToBelong = data3;
+        console.log(allToBelong);
         db.transaction(fillToBelong, errorCB, successCB);
+        db.transaction(selectToBelong, errorCB, successCB);
     });
 
     $.ajax({
@@ -103,12 +105,20 @@ function fillToBelong(tx)
     tx.executeSql("CREATE TABLE IF NOT EXISTS to_belong (fk_picture INTEGER, fk_category INTEGER, FOREIGN KEY(fk_picture) REFERENCES pictures(picture_id), FOREIGN KEY(fk_category) REFERENCES categories(category_id))");
     for(var i = 0; i < allToBelong.length; i++)
     {
+        console.log(i);
         var sql = 'INSERT INTO to_belong (fk_category, fk_picture) VALUES (' 
         + allToBelong[i].fk_category + ', "' + allToBelong[i].fk_picture + '")';
         tx.executeSql(sql);
     }
 }
 
+function selectToBelong(tx)
+{
+    tx.executeSql("SELECT * FROM to_belong", [], function(tx, result)
+    {
+        console.log(result.rows);
+    });
+}
 //remplie la table to_have avec les données du json
 function fillTags(tx)
 {
