@@ -11,6 +11,7 @@ var category;
 //qui remplissent les tables
 function fillDB(tx)
 {
+    console.log("je remplie la db");
     $.ajax({
         type: "get",
         url: "json/pictures.json",
@@ -40,6 +41,7 @@ function fillDB(tx)
         console.log(data3);
         allToBelong = data3;
         db.transaction(fillToBelong, errorCB, successCB);
+        db.transaction(selectToBelong, errorCB, successCB);
     });
 
     $.ajax({
@@ -59,7 +61,9 @@ function fillDB(tx)
     }).done(function(data5)
     {
         allToHave = data5;
+        console.log(allToHave);
         db.transaction(fillToHave, errorCB, successCB);
+        db.transaction(selectToHave, errorCB, successCB);
     });       
 }
 
@@ -73,12 +77,28 @@ function successCB()
     console.log("success!");
 }
 
+function selectToBelong(tx)
+{
+    tx.executeSql("SELECT * FROM to_belong", [], function(tx, result)
+    {
+        console.log(result.rows);
+    });
+}
+
+function selectToHave(tx)
+{
+    tx.executeSql("SELECT * FROM to_have", [], function(tx, result)
+    {
+        console.log(result.rows);
+    });
+}
+
 //remplie la table pictures avec les données du json
 function fillPictures(tx)
 {
     tx.executeSql("CREATE TABLE IF NOT EXISTS pictures (picture_id unique, picture_name, picture_url)");
     for(var i = 0; i < allPictures.length; i++)
-    {
+    {pictures
         var sql = 'INSERT INTO pictures (picture_id, picture_name, picture_url) VALUES (' 
         + allPictures[i].picture_id + ', "' + allPictures[i].picture_name + '", "' + allPictures[i].picture_url + '")';
         tx.executeSql(sql);
@@ -100,23 +120,37 @@ function fillCategories(tx)
 //remplie la table to_belong avec les données du json
 function fillToBelong(tx)
 {
-    tx.executeSql("DROP TABLE IF EXISTS to_belong");
-    tx.executeSql("CREATE TABLE IF NOT EXISTS to_belong (fk_picture INTEGER, fk_category INTEGER, FOREIGN KEY(fk_picture) REFERENCES pictures(picture_id), FOREIGN KEY(fk_category) REFERENCES categories(category_id))");
     console.log(allToBelong);
+    tx.executeSql("DROP TABLE to_belong IF EXISTS");
+    tx.executeSql("CREATE TABLE IF NOT EXISTS to_belong (fk_picture INTEGER, fk_category INTEGER, FOREIGN KEY(fk_picture) REFERENCES pictures(picture_id), FOREIGN KEY(fk_category) REFERENCES categories(category_id))");
     for(var i = 0; i < allToBelong.length; i++)
     {
-        console.log(i);
-        console.log(allToBelong[i]);
         var sql = 'INSERT INTO to_belong (fk_category, fk_picture) VALUES (' 
         + allToBelong[i].fk_category + ', "' + allToBelong[i].fk_picture + '")';
         tx.executeSql(sql);
-    }
-    console.log(allToBelong);
-    tx.executeSql("SELECT * FROM to_belong", [], function(tx, result)
+    };
+}
+
+function checkIfTablesExist(tx)
+{
+    tx.executeSql("SELECt * FROM pictures", [], function(tx, result)
     {
+        console.log("Je select * from picture");
         console.log(result.rows);
     });
 }
+
+// function ifDBDoesntExists()
+// {
+//     console.log("creating db");
+//     db.transaction(fillDB, errorCB, executeScan);
+// }
+
+// function ifDBExists()
+// {
+//     console.log("la bdd existe");
+//     db.transaction(destroyDB, errorCB, successCB);
+// }
 
 //remplie la table to_have avec les données du json
 function fillTags(tx)
@@ -133,6 +167,8 @@ function fillTags(tx)
 //remplie la table to_have avec les données du json
 function fillToHave(tx)
 {
+    console.log(allToHave);
+    tx.executeSql("DROP TABLE to_have IF EXISTS");
     tx.executeSql("CREATE TABLE IF NOT EXISTS to_have (fk_picture INTEGER, fk_tag INTEGER, FOREIGN KEY(fk_picture) REFERENCES pictures (picture_id), FOREIGN KEY(fk_tag) REFERENCES tags (tag_id))");
     for(var i = 0; i < allToHave.length; i++)
     {

@@ -15,7 +15,6 @@ function start()
 {
     db.transaction(fillDB, errorCB, successCB);
     db.transaction(searchAllPictures, errorCB, successCB);
-    db.transaction(testcategoris, errorCB, successCB);
 } 
 
 function searchAllCategories(tx)
@@ -35,20 +34,11 @@ function searchAllPictures(tx)
     });
 }
 
-function testcategoris(tx)
-{
-    tx.executeSql("SELECT * FROM to_belong", [], function (tx, result)
-    {
-        //console.log(result.rows)
-    });
-}
-
 function searchByCategory(tx)
 {
     var catId = parseInt(str);
     numberOfTurn = 0;
     resetInterface();
-    //console.log(catId);
     tx.executeSql('SELECT fk_picture FROM to_belong WHERE fk_category =' + catId, [], function(tx, result)
     {
         console.log("je select la categorie");
