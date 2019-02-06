@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Wed Dec 19 23:40:11 CET 2018
+#Tue Feb 05 23:33:04 CET 2019
 38.path=www/images/chambre.JPG
 429.baseType=DIRECTORY
 100.set=ASSET
